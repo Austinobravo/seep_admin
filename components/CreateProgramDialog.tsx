@@ -5,6 +5,8 @@ import {
   Dialog,
   DialogContent,
   DialogClose,
+  DialogTitle,
+  DialogDescription
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import {
@@ -237,7 +239,10 @@ export function CreateProgramDialog({
 
   return (
     <Dialog open={isOpen} onOpenChange={(open) => !open && handleClose()}>
-      <DialogContent showCloseButton={false} className="max-w-[920px] w-[95vw] rounded-3xl border border-zinc-100 dark:border-zinc-800 p-0 overflow-hidden bg-[#FAFBFC] dark:bg-zinc-950 shadow-2xl">
+      <DialogContent showCloseButton={false} className="sm:max-w-[920px] w-[95vw] rounded-3xl border border-zinc-100 dark:border-zinc-800 p-0 overflow-hidden bg-[#FAFBFC] dark:bg-zinc-950 shadow-2xl">
+        <DialogTitle>
+          <DialogDescription></DialogDescription>
+        </DialogTitle>
         <div className="grid grid-cols-1 md:grid-cols-12 min-h-[520px]">
           
           {/* Column 1: Steps Stepper (ColSpan 3) */}
