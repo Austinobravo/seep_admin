@@ -132,3 +132,9 @@
     @apply font-sans;
   }
 }
+
+@layer utilities {
+  .tab-style {
+    @apply text-sm font-medium text-gray-400 pb-3 border-b-2 border-transparent transition-all rounded-none bg-transparent shadow-none px-1 data-[state=active]:text-gray-900 data-[state=active]:border-gray-900 data-[state=active]:shadow-none;
+  }
+}

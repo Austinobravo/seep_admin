@@ -239,11 +239,11 @@ export function CreateProgramDialog({
 
   return (
     <Dialog open={isOpen} onOpenChange={(open) => !open && handleClose()}>
-      <DialogContent showCloseButton={false} className="sm:max-w-[920px] w-[95vw] rounded-3xl border border-zinc-100 dark:border-zinc-800 p-0 overflow-hidden bg-[#FAFBFC] dark:bg-zinc-950 shadow-2xl">
+      <DialogContent showCloseButton={false} className="sm:max-w-[920px] w-[95vw] rounded-3xl border border-zinc-100 dark:border-zinc-800 p-0 overflow-auto bg-[#FAFBFC] dark:bg-zinc-950 shadow-2xl">
         <DialogTitle>
           <DialogDescription></DialogDescription>
         </DialogTitle>
-        <div className="grid grid-cols-1 md:grid-cols-12 min-h-[520px]">
+        <div className="grid grid-cols-1 md:grid-cols-12 max-h-[520px]">
           
           {/* Column 1: Steps Stepper (ColSpan 3) */}
           <div className="md:col-span-3 bg-zinc-50 dark:bg-zinc-900/50 p-6 flex flex-col justify-between border-r border-zinc-100 dark:border-zinc-800/60">
