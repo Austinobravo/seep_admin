@@ -4,6 +4,8 @@ import React from "react";
 import { Plus, Image as ImageIcon, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import Link from "next/link"
+import UploadMediaModal from "./create/_components/UploadMediaModal";
 
 export default function GalleryPage() {
   const images = [
@@ -46,10 +48,7 @@ export default function GalleryPage() {
             Visual archive of program activities, community milestones, and site constructs.
           </p>
         </div>
-        <Button className="bg-[#335CFF] hover:bg-[#224BE6] text-white font-semibold text-xs py-2 px-4 rounded-xl shadow-xs transition-all w-fit cursor-pointer">
-          <Plus className="w-4 h-4 mr-1.5" />
-          Add Media
-        </Button>
+        <UploadMediaModal />
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
@@ -65,13 +64,13 @@ export default function GalleryPage() {
                 {img.tag}
               </span>
             </div>
-            <div className="p-4 space-y-2">
+            <Link href="/gallery/create" className="p-4 space-y-2">
               <h3 className="text-xs font-bold text-zinc-900 dark:text-zinc-100 line-clamp-1">{img.title}</h3>
               <p className="text-[10px] text-zinc-500 dark:text-zinc-400 line-clamp-2 leading-relaxed">{img.desc}</p>
               <div className="flex items-center gap-1 text-[9px] text-zinc-400 font-semibold uppercase pt-2">
                 <MapPin className="w-3 h-3" /> {img.location}
               </div>
-            </div>
+            </Link>
           </Card>
         ))}
       </div>
