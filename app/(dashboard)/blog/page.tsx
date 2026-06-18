@@ -4,7 +4,7 @@ import React from "react";
 import { Plus, BookOpen, Clock, Tag } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-
+import Link from "next/link"
 export default function BlogPage() {
   const articles = [
     {
@@ -45,10 +45,12 @@ export default function BlogPage() {
             Publish updates, announcement stories, case studies, and impact reports.
           </p>
         </div>
+        <Link href="/blog/create">
         <Button className="bg-[#335CFF] hover:bg-[#224BE6] text-white font-semibold text-xs py-2 px-4 rounded-xl shadow-xs transition-all w-fit cursor-pointer">
           <Plus className="w-4 h-4 mr-1.5" />
           Add Blog Post
         </Button>
+        </Link>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

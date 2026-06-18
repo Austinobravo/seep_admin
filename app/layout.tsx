@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 
 import "./globals.css";
 import localFont from 'next/font/local'
+import { Toaster } from "@/components/ui/sonner"
 
 const satoshi = localFont({
   src:[
@@ -91,7 +92,12 @@ export default function RootLayout({
       lang="en"
       className={`${satoshi.className} ${generalSans.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-[#FAFBFC]">{children}</body>
+      <body className="min-h-full flex flex-col bg-[#FAFBFC]">
+          <main>
+          {children}
+          </main>
+          <Toaster />
+        </body>
     </html>
   );
 }

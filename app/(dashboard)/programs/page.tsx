@@ -18,7 +18,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Badge } from "@/components/ui/badge";
-
+import Link from "next/link"
 // Mock Data representing the interface items
 const INITIAL_PROGRAMS = [
   {
@@ -157,7 +157,7 @@ export default function ProgramsDashboard() {
             </div>
 
             {/* Content Context Layer */}
-            <div className="p-5 flex-1 flex flex-col justify-between">
+            <Link href="/programs/1" className="p-5 flex-1 flex flex-col justify-between">
               <div>
                 <div className="flex items-center justify-between gap-2 mb-2">
                   <h3 className="font-bold text-gray-900 text-lg tracking-tight line-clamp-1">{program.title}</h3>
@@ -184,7 +184,7 @@ export default function ProgramsDashboard() {
                   <span className="text-gray-700">{program.status === 'Publish' ? 'Publish' : 'Draft'}</span>
                 </div>
               </div>
-            </div>
+            </Link>
 
           </div>
         ))}

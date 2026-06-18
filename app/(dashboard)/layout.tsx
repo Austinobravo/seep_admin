@@ -276,6 +276,7 @@ export default function DashboardLayout({
     }
   };
 
+
   return (
     <div className="flex min-h-screen bg-[#FAFBFC] dark:bg-zinc-950 font-sans text-zinc-900 dark:text-zinc-50">
       <TooltipProvider>
@@ -321,7 +322,10 @@ export default function DashboardLayout({
           {/* Menu list */}
           <nav className="flex-1 w-full space-y-1.5 overflow-y-auto no-scrollbar">
             {menuItems.map((item, idx) => {
-              const isActive = pathname === item.href;
+              const isActive = item.href === "/" 
+              ? pathname === "/" 
+              : pathname.startsWith(item.href);
+
               const linkContent = (
                 <Link
                   key={idx}
@@ -459,7 +463,10 @@ export default function DashboardLayout({
 
               <nav className="flex-1 space-y-1.5 overflow-y-auto no-scrollbar">
                 {menuItems.map((item, idx) => {
-                  const isActive = pathname === item.href;
+                  const isActive = item.href === "/" 
+                  ? pathname === "/" 
+                  : pathname.startsWith(item.href);
+
                   return (
                     <Link
                       key={idx}
