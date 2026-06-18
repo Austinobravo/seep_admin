@@ -1,9 +1,11 @@
 "use client";
 
 import React from "react";
-import { DollarSign, ArrowUpRight, Search, Download } from "lucide-react";
+import { DollarSign, ArrowUpRight, Search, Download, Plus } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import AddDonationModal from "./_components/AddDonationModal"
+
 
 export default function DonationsPage() {
   const donations = [
@@ -23,10 +25,13 @@ export default function DonationsPage() {
             Track financial contributions, payment failures, and transaction methods.
           </p>
         </div>
-        <Button variant="outline" className="border-zinc-200 dark:border-zinc-800 text-zinc-700 dark:text-zinc-300 font-semibold text-xs py-2 px-4 rounded-xl hover:bg-zinc-50 transition-all w-fit cursor-pointer">
-          <Download className="w-4 h-4 mr-1.5" />
-          Export Ledger
-        </Button>
+        <div className="flex gap-2 items-center">
+          <AddDonationModal />
+          <Button variant="outline" className="border-zinc-200 dark:border-zinc-800 text-zinc-700 dark:text-zinc-300 font-semibold text-xs py-2 px-4 rounded-xl hover:bg-zinc-50 transition-all w-fit cursor-pointer">
+            <Download className="w-4 h-4 mr-1.5" />
+            Export Ledger
+          </Button>
+        </div>
       </div>
 
       {/* Stats Cards */}

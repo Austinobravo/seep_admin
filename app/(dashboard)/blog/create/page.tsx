@@ -55,16 +55,16 @@ export default function CreateBlogPostDirectFields() {
 
       if (!response.ok) throw new Error("Submission failed");
 
-      toast({
-        title: "Published!",
-        description: "Blog post has been successfully pushed live.",
-      });
+    //   toast({
+    //     title: "Published!",
+    //     description: "Blog post has been successfully pushed live.",
+    //   });
     } catch (error) {
-      toast({
-        variant: "destructive",
-        title: "Error",
-        description: "Failed to submit. Please verify fields and try again.",
-      });
+    //   toast({
+    //     variant: "destructive",
+    //     title: "Error",
+    //     description: "Failed to submit. Please verify fields and try again.",
+    //   });
     } finally {
       setIsSubmitting(false);
     }

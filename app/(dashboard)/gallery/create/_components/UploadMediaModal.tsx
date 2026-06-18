@@ -66,7 +66,7 @@ export default function UploadMediaModal({ onClose }: UploadMediaModalProps) {
         body: JSON.stringify(data),
       });
       if (!response.ok) throw new Error("Server rejected transfer configuration parameters");
-      onClose();
+      onClose?.();
     } catch (err) {
       console.error(err);
     } finally {

@@ -6,7 +6,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { X, Plus, Info } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { uploadMediaSchema, UploadMediaFormValues } from "@/types/gallery";
+import { uploadMediaSchema, UploadMediaFormValues } from "@/lib/formSchema";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 
 interface UploadMediaInitialModalProps {
